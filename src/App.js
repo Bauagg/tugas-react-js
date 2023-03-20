@@ -1,23 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import Componen from './tugas-componen/componen-function';
+import ComponenClass from './tugas-componen/componen-class';
 
 function App() {
+  const paragraf = `tugas react js membuat componen`
+  const aLink = `Profile`
+
+  const clickButton = () => alert(`tombol telah di click`)
+  const h1Heder = () => <h1>Componen ini terbuat dari class</h1>
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ComponenClass aLink={aLink} h1Heder={h1Heder} />
+      <Componen paragraf={paragraf} clickButton={clickButton} />
     </div>
   );
 }
